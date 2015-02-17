@@ -26,6 +26,12 @@ public class TrustEngineOne extends AbstractTrustEngine {
 	public TrustEngineOne(User user1, User user2) {
 		super(user1, user2);
 	}
+	
+	@Override
+	public void initialize(User user1, User user2){
+		this.meanRatingUser1 = calculateUserMeanRating(assetsRatingsUser1);
+		this.meanRatingUser2 = calculateUserMeanRating(assetsRatingsUser2);
+	}
 
 	/**
 	 * This method calculates trust between two users based on given variables
@@ -34,8 +40,6 @@ public class TrustEngineOne extends AbstractTrustEngine {
 	 * @return
 	 */
 	public double calculateTrust() {
-		this.meanRatingUser1 = calculateUserMeanRating(assetsRatingsUser1);
-		this.meanRatingUser2 = calculateUserMeanRating(assetsRatingsUser2);
 		int numOfCorrectTrust = 0;
 		double predictedValue;
 		this.userSimilarity = calculateUserSimilarity();

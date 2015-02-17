@@ -29,9 +29,6 @@ public class TrustEngineTwo extends AbstractTrustEngine {
 	 */
 	@Override
 	public double calculateTrust() {
-
-		this.meanRatingUser1 = calculateUserMeanRating(assetsRatingsUser1);
-		this.meanRatingUser2 = calculateUserMeanRating(assetsRatingsUser2);
 		final int MAX_RATING_VALUE = 5;
 		Integer itemRatingUser1;
 		Integer itemRatingUser2;
