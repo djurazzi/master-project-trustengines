@@ -25,6 +25,8 @@ public class TrustEngineOne extends AbstractTrustEngine {
 
 	public TrustEngineOne(User user1, User user2) {
 		super(user1, user2);
+		this.meanRatingUser1 = calculateUserMeanRating(assetsRatingsUser1);
+		this.meanRatingUser2 = calculateUserMeanRating(assetsRatingsUser2);
 	}
 	
 	@Override
