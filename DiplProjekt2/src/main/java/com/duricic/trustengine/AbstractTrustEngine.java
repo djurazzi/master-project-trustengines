@@ -67,7 +67,7 @@ public abstract class AbstractTrustEngine {
 	}
 	
 	/**
-	 * Resets the all the intern variables of the trust engine.
+	 * Resets the all the internal variables of the trust engine.
 	 * 
 	 */
 	public void reset(){
